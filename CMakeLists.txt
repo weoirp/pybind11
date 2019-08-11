@@ -59,6 +59,7 @@ set(PYBIND11_HEADERS
   include/pybind11/eigen.h
   include/pybind11/embed.h
   include/pybind11/eval.h
+  include/pybind11/external.hpp
   include/pybind11/functional.h
   include/pybind11/numpy.h
   include/pybind11/operators.h
@@ -73,6 +74,8 @@ string(REPLACE "include/" "${CMAKE_CURRENT_SOURCE_DIR}/include/"
 if (PYBIND11_TEST)
   add_subdirectory(tests)
 endif()
+
+add_subdirectory(debug)
 
 include(GNUInstallDirs)
 include(CMakePackageConfigHelpers)
